@@ -18,19 +18,13 @@ function createHeart() {
     heart.classList.add("heart");
     document.getElementById("hearts-container").appendChild(heart);
 
-    const size = Math.random() * 20 + 10; // Tamaño aleatorio
-    const x = Math.random() * window.innerWidth; // Posición aleatoria en el eje X
-    const y = Math.random() * window.innerHeight; // Posición aleatoria en el eje Y
-
+    const size = Math.random() * 20 + 10;
     heart.style.fontSize = `${size}px`;
-    heart.style.position = "absolute"; // Necesario para posicionar los corazones en la pantalla
-    heart.style.left = `${x}px`;
-    heart.style.top = `${y}px`;
+    heart.style.left = `${Math.random() * 100}%`;
 
     setTimeout(() => {
-        heart.remove(); // Elimina el corazón después de 4 segundos
+        heart.remove();
     }, 4000);
-}
 }
 
 setInterval(createHeart, 300);
