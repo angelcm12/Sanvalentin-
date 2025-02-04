@@ -2,6 +2,12 @@ document.getElementById("yes-btn").addEventListener("click", function () {
     alert("Sabía que dirías que sí, my love. 사랑해");
 });
 
+document.getElementById("play-music").addEventListener("click", function () {
+    const audio = document.getElementById("bg-music");
+    audio.play().catch(error => console.log("Reproducción bloqueada:", error));
+    this.style.display = "none"; // Oculta el botón después de tocarlo
+});
+
 const noBtn = document.getElementById("no-btn");
 
 noBtn.addEventListener("mouseover", function () {
